@@ -3,18 +3,18 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { Home } from "../../pages/Home/Home";
+import { Agent } from "./../../pages/Agent/Agent";
 import { PATHS } from "./paths";
 
 const router = createBrowserRouter([
   {
     path: PATHS.ROOT,
-    element: <Navigate to={PATHS.HOME} replace />,
+    element: <Navigate to={PATHS.AGENT} replace />,
   },
 
   {
-    path: PATHS.HOME,
-    element: <Home />,
+    path: PATHS.AGENT,
+    element: <Agent />,
   },
 ]);
 

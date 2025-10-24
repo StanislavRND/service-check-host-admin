@@ -1,18 +1,41 @@
 :root {
-  --primary-red-light-color: #ff5151;
-  --primary-red-ligth-hover-color: #f13d3d;
+  /* Базовые цвета Vuetify для темной темы */
+  --v-primary-base: #f4f4f4;
+  --v-secondary-base: #ffffff;
+  --v-error-base: #ff003d;
+  --v-info-base: #2196f3;
+  --v-anchor-base: rgb(255, 255, 255);
 
-  --primary-blue-color: #42a5f5;
-  --primary-blue-hover-color: #3f9ae4;
+  /* Основные UI цвета для темной темы */
+  --ui-color-scheme: dark;
+  --ui-color-background: #05070f;
+  --ui-color-card: rgb(22, 22, 22);
+  --ui-color-card-bg: #11131b;
+  --ui-color-input: rgba(255, 255, 255, 0.1);
 
-	--primary-green-color: #38c36b;
-  --primary-green-ligth-color: #34b061;
+  /* Цвета текста */
+  --ui-color-text: rgb(220, 217, 217);
+  --ui-color-primary: rgb(230, 230, 230);
+  --ui-color-secondary: rgb(255, 255, 255);
 
-  --grey-light-color: #eceff1;
-  --grey-color: #dbdcdd;
+  /* Интерактивные элементы */
+  --ui-color-hover-btn: #202020;
+  --ui-color-pressed: rgb(250, 250, 250);
+  --ui-color-button: rgba(255, 255, 255, 0.1);
+  --ui-color-button-hover: rgba(24, 201, 225, 0.51);
 
-  --text-color: #4d4646;
-  --text-color-light: #615858;
+  /* Ссылки и навигация */
+  --ui-color-link-grey: rgb(144, 235, 241);
+  --ui-color-link-active: rgba(255, 255, 255, 0.8);
+  --ui-color-sidebar: transparent;
 
-  --error-color: #f83939;
+  /* Состояния и уведомления */
+  --ui-color-alert: #501919;
+  --ui-color-alert-warning: #312f00;
+  --ui-color-alert-info: #1e3737;
+
+  /* Формы и инпуты */
+  --ui-color-input-hover: #303030;
+  --ui-color-input-active: #606060;
+  --ui-color-placeholder: #8e8e8e;
 }

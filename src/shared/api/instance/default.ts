@@ -34,17 +34,10 @@ const processQueue = (error: Error | null) => {
   failedQueue = [];
 };
 
-interface AxiosRequestConfigWithRetry extends AxiosRequestConfig {
-  _retry?: boolean;
-  _retryCount?: number;
-}
-
 axiosBase.interceptors.response.use(
   (response) => response,
   async (error: AxiosError) => {
     const originalRequest = error.config as AxiosRequestConfigWithRetry;
-
-    originalRequest._retryCount = originalRequest._retryCount || 0;
 
     const isAuthEndpoint =
       originalRequest.url?.startsWith("/auth/login") ||
@@ -53,11 +46,8 @@ axiosBase.interceptors.response.use(
     if (
       error.response?.status === 401 &&
       !originalRequest._retry &&
-      !isAuthEndpoint &&
-      originalRequest._retryCount < 2
+      !isAuthEndpoint
     ) {
-      originalRequest._retryCount++;
-
       if (isRefreshing) {
         return new Promise((resolve, reject) => {
           failedQueue.push({ resolve, reject, config: originalRequest });
@@ -89,4 +79,5 @@ axiosBase.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
 export default axiosBase;

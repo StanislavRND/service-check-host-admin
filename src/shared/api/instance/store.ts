@@ -1,6 +1,5 @@
 import type { BaseQueryApi, BaseQueryFn } from "@reduxjs/toolkit/query";
 import type { AxiosError, AxiosRequestConfig } from "axios";
-import type { RootState } from "../../../app/store/store";
 import axiosBase from "../instance/default";
 
 type AxiosBaseQueryArgs = {
@@ -18,39 +17,13 @@ export const axiosBaseQuery =
     unknown,
     BaseQueryApi
   > =>
-  async ({ url, method = "GET", data, params }, { getState, signal }) => {
+  async ({ url, method = "GET", data, params }, { signal }) => {
     try {
-      const state = getState() as RootState;
-      const domainUuid = state.user.domain_uuid;
-
-      let finalParams = { ...params };
-      let finalData = data;
-
-      if (domainUuid && !/\/\d+($|\/)/.test(url)) {
-        const methodUpper = method.toUpperCase();
-
-        if (methodUpper === "GET") {
-          finalParams = {
-            ...finalParams,
-            domain_uuid: domainUuid,
-          };
-        } else if (["POST"].includes(methodUpper)) {
-          if (finalData && typeof finalData === "object") {
-            finalData = {
-              ...finalData,
-              domain_uuid: domainUuid,
-            };
-          } else if (finalData === undefined || finalData === null) {
-            finalData = { domain_uuid: domainUuid };
-          }
-        }
-      }
-
       const result = await axiosBase({
         url,
         method,
-        data: finalData,
-        params: finalParams,
+        data,
+        params,
         signal,
       });
 
