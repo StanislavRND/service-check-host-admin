@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  color: var(--ui-color-card);
+  background-color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(231, 231, 231);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.loader {
+
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

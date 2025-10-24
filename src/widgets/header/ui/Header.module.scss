@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  background-color: var(--ui-color-background);
+  padding: 0 30px;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  img {
+    width: 90px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 56px;
+		padding-top: 30px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-color: var(--ui-color-background);
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+    transition: right 0.3s ease;
+  }
+
+  &.active {
+    @media (max-width: 768px) {
+      right: 0;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: transform 0.1s ease;
+
+  span {
+    color: white;
+  }
+
+  svg {
+    margin-top: -3px;
+  }
+
+  &:hover {
+    transform: translateX(1.5px);
+  }
+
+  * {
+    pointer-events: none;
+  }
+}
+
+.desktopBtn {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileBtn {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 200;
+
+  span {
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}

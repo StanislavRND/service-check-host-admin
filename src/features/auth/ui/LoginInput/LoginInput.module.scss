@@ -1,0 +1,45 @@
+@import "../../../../shared/styles/mixin";
+
+.inputWrapper {
+  @include flex-center(column, 6px);
+  align-items: start;
+  width: 100%;
+}
+
+.blockInput {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding-right: 50px;
+  padding-left: 12px;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+  font-size: 0.925rem;
+	color: white;
+  background-color: var(--ui-color-input);
+
+  &::placeholder {
+    font-size: 0.875rem;
+		// color: rgb(136, 136, 136)
+  }
+
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
+.inputError {
+  border: 1px solid var(--v-error-base);
+}
+
+.errorNull {
+  font-size: 0.825rem;
+  color: var(--v-error-base);
+  margin-top: -5px;
+  display: none;
+}

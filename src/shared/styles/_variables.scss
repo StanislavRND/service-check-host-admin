@@ -8,10 +8,10 @@
 
   /* Основные UI цвета для темной темы */
   --ui-color-scheme: dark;
-  --ui-color-background: #05070f;
-  --ui-color-card: rgb(22, 22, 22);
-  --ui-color-card-bg: #11131b;
-  --ui-color-input: rgba(255, 255, 255, 0.1);
+  --ui-color-background: #0f1117; /* был #05070f - сделал светлее */
+  --ui-color-card: #1d1f2b; /* был #1a1a1a - значительно светлее */
+  --ui-color-card-bg: #252525; /* был #1d1d1d - светлее */
+  --ui-color-input: #ffffff33;
 
   /* Цвета текста */
   --ui-color-text: rgb(220, 217, 217);

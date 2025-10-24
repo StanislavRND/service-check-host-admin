@@ -1,0 +1,50 @@
+@import "../../../../shared/styles/mixin";
+
+.form {
+  @include flex-center(column, 32px);
+  padding: 3rem 4.5rem;
+  min-width: 540px;
+  background-color: var(--ui-color-card);
+  border-radius: 1.25rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .form {
+    min-width: 450px;
+  }
+}
+@media (max-width: 478px) {
+  .form {
+    padding: 3rem 2.5rem;
+    min-width: 370px;
+  }
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.logo {
+  width: 150px;
+}
+
+.btn {
+  height: 3.5rem;
+  width: 100%;
+}
+
+.serverError {
+  color: var(--v-error-base);
+  margin-right: auto;
+  margin-top: -20px;
+  font-size: 0.875rem;
+}
