@@ -1,0 +1,66 @@
+.customSelect {
+  position: relative;
+  width: 55%;
+}
+
+.selectHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+
+  &:hover {
+    border-color: var(--grey-color);
+  }
+
+  &.open {
+    border: 1px solid rgb(255, 204, 137);
+    background-color: rgb(255, 250, 243);
+  }
+}
+
+.selectedValue {
+  color: var(--text-color);
+
+  &:empty::before {
+    content: "Выберите роль";
+    color: var(--text-color);
+  }
+}
+
+.arrow {
+  transition: transform 0.2s;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.selectOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--grey-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.option {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(255, 250, 243);
+  }
+}

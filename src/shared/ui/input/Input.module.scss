@@ -1,0 +1,38 @@
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  label {
+    font-size: 0.875rem;
+  }
+
+  input {
+    width: 55%;
+    border: 1px solid var(--grey-color);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+
+    &:focus {
+      border: 1px solid rgb(255, 204, 137);
+      background-color: rgb(255, 250, 243);
+    }
+
+    &::placeholder {
+      color: var(--text-color);
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.error {
+  color: var(--primary-red-light-color);
+  text-align: center;
+}
+
+.errorGl {
+  text-align: end;
+  color: var(--primary-red-light-color);
+  margin-top: -10px;
+}

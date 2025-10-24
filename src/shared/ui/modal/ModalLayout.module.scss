@@ -1,0 +1,148 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 40%;
+  min-width: 500px;
+  min-height: 50vh;
+  width: 100%;
+  max-height: 90vh;
+  animation: slideIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+  .modal {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    max-width: 60%;
+  }
+}
+@media (max-width: 1000px) {
+  .modal {
+    max-width: 80%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px;
+  border-bottom: 1px solid var(--grey-color);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.closeButton {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgb(171, 171, 171);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #d2d2d2;
+    color: #4a5568;
+  }
+}
+
+.content {
+  padding: 30px 20px 50px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid var(--grey-color);
+  flex-shrink: 0;
+}
+
+.confirmButton {
+  min-width: 110px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary-green-ligth-color);
+  color: var(--primary-green-ligth-color);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--primary-green-ligth-color);
+    color: white;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
