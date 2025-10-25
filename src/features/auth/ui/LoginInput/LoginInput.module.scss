@@ -20,17 +20,24 @@
   font-weight: 500;
   transition: border-color 0.3s ease;
   font-size: 0.925rem;
-	color: white;
+  color: white;
   background-color: var(--ui-color-input);
 
   &::placeholder {
     font-size: 0.875rem;
-		// color: rgb(136, 136, 136)
   }
 
   &:focus {
     border: 1px solid white;
   }
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .inputError {

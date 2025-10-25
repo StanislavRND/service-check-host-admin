@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import styles from "./ModalLayoutMain.module.scss";
+import styles from "./ModalLayout.module.scss";
 
 interface ModalProps {
   isOpen: boolean;

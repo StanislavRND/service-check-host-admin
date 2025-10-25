@@ -6,33 +6,39 @@
 
   label {
     font-size: 0.875rem;
+    color: var(--ui-color-text);
   }
 
   input {
     width: 55%;
-    border: 1px solid var(--grey-color);
+    border: 1px solid var(--ui-color-input-active);
     padding: 0.75rem;
     border-radius: 0.5rem;
+    background-color: var(--ui-color-card-bg);
+    color: var(--ui-color-text);
 
     &:focus {
-      border: 1px solid rgb(255, 204, 137);
-      background-color: rgb(255, 250, 243);
+      border: 1px solid white;
+
+      outline: none;
     }
 
     &::placeholder {
-      color: var(--text-color);
+      color: var(--ui-color-placeholder);
       font-size: 0.875rem;
     }
   }
 }
 
 .error {
-  color: var(--primary-red-light-color);
-  text-align: center;
+  color: var(--v-error-base);
+  text-align: end;
+  font-size: 0.875rem;
 }
 
 .errorGl {
   text-align: end;
-  color: var(--primary-red-light-color);
+  color: var(--v-error-base);
   margin-top: -10px;
+  font-size: 0.875rem;
 }

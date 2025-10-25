@@ -9,17 +9,18 @@
   justify-content: space-between;
   padding: 12px;
   border-radius: 0.5rem;
-  border: 1px solid var(--grey-color);
+  border: 1px solid var(--ui-color-input-active);
   cursor: pointer;
   font-size: 0.875rem;
+  background-color: var(--ui-color-card-bg);
 
   &:hover {
-    border-color: var(--grey-color);
+    border-color: var(--ui-color-input-active);
   }
 
   &.open {
-    border: 1px solid rgb(255, 204, 137);
-    background-color: rgb(255, 250, 243);
+    border: 1px solid var(--ui-color-input-active);
+    background-color: var(--ui-color-card-bg);
   }
 }
 
@@ -46,9 +47,10 @@
   left: 0;
   right: 0;
   background: white;
-  border: 1px solid var(--grey-color);
+  border: 1px solid var(--ui-color-input-active);
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--ui-color-card-bg);
   z-index: 1000;
   margin-top: 4px;
   max-height: 300px;
@@ -61,6 +63,6 @@
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: rgb(255, 250, 243);
+    background-color: #333333;
   }
 }

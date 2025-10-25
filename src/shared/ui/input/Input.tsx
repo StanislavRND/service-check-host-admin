@@ -9,19 +9,22 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, clearError, className, ...props }, ref) => {
+  ({ label, clearError, className, error, ...props }, ref) => {
     return (
-      <div className={`${className || ""} ${styles.inputWrapper} `}>
-        {label && <label>{label}</label>}
-        <input
-          ref={ref}
-          {...props}
-          onChange={(e) => {
-            props.onChange?.(e);
-            clearError?.();
-          }}
-        />
-      </div>
+      <>
+        <div className={`${className || ""} ${styles.inputWrapper} `}>
+          {label && <label>{label}</label>}{" "}
+          <input
+            ref={ref}
+            {...props}
+            onChange={(e) => {
+              props.onChange?.(e);
+              clearError?.();
+            }}
+          />
+        </div>
+        {error && <p className={styles.error}>{error}</p>}
+      </>
     );
   }
 );

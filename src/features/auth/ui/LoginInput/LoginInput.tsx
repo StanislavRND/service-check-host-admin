@@ -43,6 +43,7 @@ export const LoginInput = <T extends FieldValues>({
             className={styles.btn}
             isOpen={isPassVisible}
             onClick={togglePassVisibility}
+				
           />
         )}
       </div>

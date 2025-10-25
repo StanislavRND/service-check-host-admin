@@ -1,14 +1,12 @@
-import styles from "./EyeIcon.module.scss";
-
 interface EyeIconProps {
   isOpen: boolean;
   onClick: () => void;
   className?: string;
 }
 
-export const EyeIcon = ({ isOpen, onClick }: EyeIconProps) => {
+export const EyeIcon = ({ isOpen, onClick, className }: EyeIconProps) => {
   return (
-    <div className={styles.btn} onClick={onClick} tabIndex={-1}>
+    <div className={`${className}`} onClick={onClick} tabIndex={-1}>
       {isOpen ? (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path

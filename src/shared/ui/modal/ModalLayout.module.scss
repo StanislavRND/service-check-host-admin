@@ -14,7 +14,7 @@
 }
 
 .modal {
-  background: white;
+  background: var(--ui-color-card);
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   max-width: 40%;
@@ -33,7 +33,6 @@
     max-width: 50%;
   }
 }
-
 @media (max-width: 1200px) {
   .modal {
     max-width: 60%;
@@ -49,15 +48,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 24px;
-  border-bottom: 1px solid var(--grey-color);
+  padding: 24px;
+  border-bottom: 1px solid var(--ui-color-input-active);
   flex-shrink: 0;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--ui-color-text);
 }
 
 .closeButton {
@@ -70,12 +69,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: rgb(171, 171, 171);
+  color: var(--ui-color-placeholder);
   transition: all 0.2s ease;
 
   &:hover {
-    background: #d2d2d2;
-    color: #4a5568;
+    background: var(--ui-color-input-hover);
+    color: var(--ui-color-text);
   }
 }
 
@@ -90,7 +89,7 @@
   justify-content: flex-end;
   gap: 12px;
   padding: 20px;
-  border-top: 1px solid var(--grey-color);
+  border-top: 1px solid var(--ui-color-input-active);
   flex-shrink: 0;
 }
 
@@ -100,13 +99,13 @@
   display: flex;
   justify-content: center;
   border-radius: 0.25rem;
-  border: 1px solid var(--primary-green-ligth-color);
-  color: var(--primary-green-ligth-color);
+  border: 1px solid var(--ui-color-primary);
+  color: var(--ui-color-primary);
   transition: all 0.2s ease;
 
   &:hover {
-    background: var(--primary-green-ligth-color);
-    color: white;
+    background: var(--ui-color-primary);
+    color: var(--ui-color-card);
   }
 
   &:active {
